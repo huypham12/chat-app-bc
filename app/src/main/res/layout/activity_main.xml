@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFC"
+    tools:context=".ui.main.MainActivity">
+
+    <!-- AppBarLayout bọc Toolbar chuẩn Material Design -->
+<com.google.android.material.appbar.AppBarLayout
+android:id="@+id/appBarLayout"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+app:elevation="0dp"
+android:background="@android:color/white">
+
+<com.google.android.material.appbar.MaterialToolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    app:menu="@menu/toolbar_menu"
+    app:title="Chat APP"
+    app:titleCentered="true"
+    app:titleTextColor="#1F2937" />
+</com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Khu vực hiển thị nội dung (Fragments) -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_nav_layout"
+        android:layout_below="@+id/appBarLayout"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/main_nav_graph" />
+
+    <!-- Bọc BottomNav và Divider vào chung một layout để dễ quản lý ở dưới đáy -->
+<LinearLayout
+android:id="@+id/bottom_nav_layout"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_alignParentBottom="true"
+android:orientation="vertical">
+
+<!-- Divider mỏng và tinh tế hơn (Màu xám nhạt thay vì đen) -->
+<com.google.android.material.divider.MaterialDivider
+    android:id="@+id/divider"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    app:dividerColor="#E2E8F0" />
+
+<!-- Bottom Navigation View chuẩn Material 3 -->
+<com.google.android.material.bottomnavigation.BottomNavigationView
+    android:id="@+id/bottom_nav_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    app:elevation="8dp"
+    app:labelVisibilityMode="labeled"
+    app:menu="@menu/bottom_view_menu" />
+</LinearLayout>
+
+    </RelativeLayout>

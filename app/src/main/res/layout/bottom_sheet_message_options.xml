@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_bottom_sheet">
+
+    <!-- Thanh Reactions -->
+    <LinearLayout
+        android:id="@+id/reactionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingVertical="8dp"
+        android:layout_marginBottom="12dp">
+        
+        <TextView
+            android:id="@+id/reactLike"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="👍"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+            
+        <TextView
+            android:id="@+id/reactLove"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="❤️"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+            
+        <TextView
+            android:id="@+id/reactHaha"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="😂"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+            
+        <TextView
+            android:id="@+id/reactWow"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="😮"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+            
+        <TextView
+            android:id="@+id/reactSad"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="😥"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+            
+        <TextView
+            android:id="@+id/reactAngry"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="😡"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+            
+        <ImageView
+            android:id="@+id/btnMoreReaction"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_add"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:layout_gravity="center_vertical"/>
+            
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E2E8F0"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tùy chọn tin nhắn"
+        android:textSize="14sp"
+        android:textColor="#64748B"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"/>
+
+    <!-- Reply -->
+    <LinearLayout
+        android:id="@+id/btnReply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:padding="12dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_reply" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Trả lời"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <!-- Forward -->
+    <LinearLayout
+        android:id="@+id/btnForward"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:padding="12dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_forward" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Chuyển tiếp"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <!-- Edit -->
+    <LinearLayout
+        android:id="@+id/btnEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:padding="12dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_edit" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Chỉnh sửa"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <!-- Delete for me -->
+    <LinearLayout
+        android:id="@+id/btnDeleteForMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:padding="12dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_delete" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Xóa ở phía tôi"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <!-- Revoke -->
+    <LinearLayout
+        android:id="@+id/btnRevoke"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:padding="12dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_block"
+            android:tint="#F44336" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Thu hồi (Xóa ở cả hai phía)"
+            android:textColor="#F44336"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</LinearLayout>

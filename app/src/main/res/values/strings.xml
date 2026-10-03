@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Chat_App</string>
+    <string name="login_title">Đăng nhập</string>
+    <string name="btn_continue">Tiếp tục</string>
+</resources>

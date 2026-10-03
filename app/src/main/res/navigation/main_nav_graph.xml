@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/chatsFragment">
+
+    <fragment
+        android:id="@+id/chatsFragment"
+        android:name="com.giangnam.chat_app.ui.main.ChatFragment"
+        android:label="Chats"
+        tools:layout="@layout/fragment_chat" />
+
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.giangnam.chat_app.ui.contacts.ContactsFragment"
+        android:label="Contacts"
+        tools:layout="@layout/fragment_contacts" />
+
+    <fragment
+        android:id="@+id/discoverFragment"
+        android:name="com.giangnam.chat_app.ui.discover.DiscoverFragment"
+        android:label="Discover"
+        tools:layout="@layout/fragment_discover" />
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.giangnam.chat_app.ui.notifications.NotificationsFragment"
+        android:label="Activity"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.giangnam.chat_app.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <argument
+            android:name="userId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+</navigation>

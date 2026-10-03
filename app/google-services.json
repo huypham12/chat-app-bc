@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "308743351328",
+    "project_id": "chat-app-3bdc2",
+    "storage_bucket": "chat-app-3bdc2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308743351328:android:30b66121ed169a4b716045",
+        "android_client_info": {
+          "package_name": "com.giangnam.chat_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEm7erXLLE4RxVWC-ucTF6xp2hQOER8Z4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

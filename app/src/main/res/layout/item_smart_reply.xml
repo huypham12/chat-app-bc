@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/replyChipTv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:background="@drawable/bg_circle_primary"
+    android:backgroundTint="#E0E0E0"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="8dp"
+    android:text="Gợi ý"
+    android:textColor="@color/black"
+    android:textSize="14sp" />

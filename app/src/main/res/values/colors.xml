@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="md_theme_light_primary">#006493</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#CAE6FF</color>
+    <color name="md_theme_light_onPrimaryContainer">#001E30</color>
+
+    <!-- Secondary Colors -->
+    <color name="md_theme_light_secondary">#50606E</color>
+    <color name="md_theme_light_onSecondary">#FFFFFF</color>
+    <color name="md_theme_light_secondaryContainer">#D3E5F5</color>
+    <color name="md_theme_light_onSecondaryContainer">#0C1D29</color>
+
+    <!-- Tertiary Colors -->
+    <color name="md_theme_light_tertiary">#65587E</color>
+    <color name="md_theme_light_onTertiary">#FFFFFF</color>
+    <color name="md_theme_light_tertiaryContainer">#EBDCFF</color>
+    <color name="md_theme_light_onTertiaryContainer">#201637</color>
+
+    <!-- Neutral Colors -->
+    <color name="md_theme_light_background">#F8FAFC</color>
+    <color name="md_theme_light_onBackground">#191C1E</color>
+    <color name="md_theme_light_surface">#F8FAFC</color>
+    <color name="md_theme_light_onSurface">#191C1E</color>
+    <color name="md_theme_light_outline">#71787E</color>
+
+    <!-- Semantic Colors -->
+    <color name="status_online">#4CAF50</color>
+    <color name="status_offline">#9E9E9E</color>
+    <color name="error">#BA1A1A</color>
+
+    <!-- Legacy / Compatibility -->
+    <color name="primary">#006493</color>
+    <color name="secondary">#50606E</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="#F8FAFC">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Privacy Settings"
+        xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nearby (Tìm bạn quanh đây)"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#1F2937"
+            android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switch_nearby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hiển thị với người khác"
+            android:textSize="16sp"
+            android:paddingVertical="12dp"/>
+            
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cho phép người dùng khác trong phạm vi 20km tìm thấy bạn."
+            android:textSize="13sp"
+            android:textColor="#6B7280"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switch_location_sharing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chia sẻ vị trí"
+            android:textSize="16sp"
+            android:paddingVertical="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cho phép ứng dụng sử dụng vị trí của bạn để tìm người xung quanh. Chúng tôi không bao giờ hiển thị toạ độ chính xác của bạn cho người khác."
+            android:textSize="13sp"
+            android:textColor="#6B7280"
+            android:layout_marginBottom="24dp"/>
+
+    </LinearLayout>
+</LinearLayout>

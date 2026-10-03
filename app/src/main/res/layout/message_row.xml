@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="4dp">
+
+    <!-- TIN NHẮN BÊN TRÁI -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/leftHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        app:strokeColor="#E2E8F0"
+        app:strokeWidth="1dp">
+
+        <LinearLayout android:id="@+id/leftContentLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+
+            <TextView
+                android:id="@+id/leftForwardTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@android:drawable/ic_menu_share"
+                android:drawablePadding="4dp"
+                android:text="Đã chuyển tiếp"
+                android:textColor="#94A3B8"
+                android:textSize="11sp"
+                android:textStyle="italic"
+                android:layout_marginBottom="4dp"
+                android:visibility="gone"
+                app:drawableTint="#94A3B8" />
+
+            <TextView
+                android:id="@+id/leftSenderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#64748B"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="2dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/leftReplyBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_reply_box"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:layout_marginBottom="4dp"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/leftReplyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tên người dùng"
+                    android:textColor="#03A9F4"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/leftReplyContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nội dung"
+                    android:textColor="#64748B"
+                    android:textSize="12sp"
+                    android:ellipsize="end"
+                    android:maxLines="2" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/leftImage"
+                android:layout_width="220dp"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/leftChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#1F2937"
+                android:textSize="16sp"
+                android:lineSpacingExtra="2dp" />
+
+            <TextView
+                android:id="@+id/leftEditedLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(Đã chỉnh sửa)"
+                android:textColor="#64748B"
+                android:textSize="10sp"
+                android:layout_marginTop="2dp"
+                android:visibility="gone" />
+
+            <!-- KHỐI AUDIO BÊN TRÁI -->
+            <LinearLayout
+                android:id="@+id/leftAudioLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/leftPlayPauseBtn"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_play"
+                    app:tint="#03A9F4" />
+
+                <SeekBar
+                    android:id="@+id/leftAudioSeekBar"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp" />
+
+                <TextView
+                    android:id="@+id/leftAudioTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="00:00"
+                    android:textColor="#475569"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/leftReactions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/leftHolder"
+        android:layout_alignEnd="@id/leftHolder"
+        android:layout_marginTop="-12dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_pill_white"
+        android:elevation="4dp"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="2dp"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <!-- TIN NHẮN HỆ THỐNG -->
+    <TextView
+        android:id="@+id/systemMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="8dp"
+        android:background="@drawable/bg_pill_white"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="4dp"
+        android:textAlignment="center"
+        android:textColor="#64748B"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <!-- TIN NHẮN BÊN PHẢI -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rightHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="60dp"
+        app:cardBackgroundColor="#03A9F4"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:id="@+id/rightContentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/rightForwardTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@android:drawable/ic_menu_share"
+                android:drawablePadding="4dp"
+                android:text="Đã chuyển tiếp"
+                android:textColor="#E0E7FF"
+                android:textSize="11sp"
+                android:textStyle="italic"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="end"
+                android:visibility="gone"
+                app:drawableTint="#E0E7FF" />
+
+            <LinearLayout
+                android:id="@+id/rightReplyBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_reply_box_right"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:layout_marginBottom="4dp"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/rightReplyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tên người dùng"
+                    android:textColor="@android:color/white"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/rightReplyContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nội dung"
+                    android:textColor="#E0F7FA"
+                    android:textSize="12sp"
+                    android:ellipsize="end"
+                    android:maxLines="2" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/rightImage"
+                android:layout_width="220dp"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/rightChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:lineSpacingExtra="2dp" />
+
+            <TextView
+                android:id="@+id/rightEditedLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(Đã chỉnh sửa)"
+                android:textColor="#E0F7FA"
+                android:textSize="10sp"
+                android:layout_gravity="end"
+                android:layout_marginTop="2dp"
+                android:visibility="gone" />
+
+            <!-- KHỐI AUDIO BÊN PHẢI -->
+            <LinearLayout
+                android:id="@+id/rightAudioLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/rightPlayPauseBtn"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_play"
+                    app:tint="@android:color/white" />
+
+                <SeekBar
+                    android:id="@+id/rightAudioSeekBar"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:progressTint="@android:color/white"
+                    android:thumbTint="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/rightAudioTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="00:00"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Trạng thái Đã xem -->
+            <TextView
+                android:id="@+id/rightReadStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="2dp"
+                android:text="Đã gửi"
+                android:textColor="#E0F7FA"
+                android:textSize="10sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/rightReactions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rightHolder"
+        android:layout_alignStart="@id/rightHolder"
+        android:layout_marginTop="-12dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/bg_pill_white"
+        android:elevation="4dp"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="2dp"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+</RelativeLayout>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Nút Tìm kiếm -->
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_search"
+        app:iconTint="#1F2937"
+        android:title="Tìm Kiếm"
+        app:showAsAction="always" />
+
+</menu>

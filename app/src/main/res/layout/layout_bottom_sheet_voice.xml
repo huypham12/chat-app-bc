@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cập nhật giọng nói AI 🎙️"
+        android:textColor="#0F172A"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Bấm giữ micro và đọc đoạn văn bên dưới để cập nhật dữ liệu giọng nói của bạn."
+        android:textColor="#64748B"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvBottomSheetEnrollCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Tôi xác nhận đây là giọng nói của tôi và đồng ý sử dụng giọng nói để xác thực tài khoản. Tôi sẽ chịu trách nhiệm về việc sử dụng tài khoản này."
+        android:textColor="#6366F1"
+        android:textSize="16sp"
+        android:textStyle="italic|bold" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnBottomSheetRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@android:drawable/ic_btn_speak_now"
+        app:backgroundTint="#6366F1"
+        app:fabSize="normal"
+        app:tint="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/tvBottomSheetStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Chạm giữ micro để thu âm"
+        android:textColor="#64748B"
+        android:textSize="14sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBottomSheetClose"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Đóng"
+        android:textColor="#EF5350" />
+
+</LinearLayout>
